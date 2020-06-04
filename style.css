@@ -1,0 +1,386 @@
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(images/background.jpg);
+  background-size: cover;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: red;
+}
+
+h1, h2 {
+  margin: 0;
+}
+/* A selector with a stlye for all h3 headers on the website  */
+h3 {
+  padding-top: 10;
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  height: 27px;
+}
+/* style for the date header that is above the poster on the events page */
+h4 {
+  font-size: 20px;
+  text-align: center;
+  border:4px;
+}
+/* style for the school emblem div that is on the index page */
+div.school-emblem {
+  width: 271px;
+  height: 205px;
+  background-image: url(images/emblem.jpeg);
+  background-image: no-repeat;
+  margin: 0;
+}
+/* style for the poster div that is on the events page */
+div.poster {
+  width: 180px;
+  height: 281px;
+  background-image: url(images/poster.jpg);
+  background-image: no-repeat;
+  border-style: groove;
+  border-width: thick;
+  border-color: gray;
+}
+/* selector for the events div */
+.events-posters {
+  flex: 1;
+  margin-left: 15px;
+  margin-right: 20px;
+}
+/* */
+.container {
+  background-color:white;
+  margin: auto;
+  flex-wrap: wrap;
+  display: flex; /* enables a flex contex for all its direct children */
+  flex-direction: column;
+}
+
+.header {
+  color: white;
+  text-align: center;
+  font-size: 21pt;
+  height: 50px;
+  padding: 16;
+  background-color: #000033;
+}
+
+.flex-top {
+  background-color: #000033;
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.events-content, .content {
+  padding-bottom: 15px;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.about-content {
+  padding-bottom: 15px;
+  background-color: white;           
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.nav {
+  border-top: 2px solid #999999;
+  padding: 5px;
+  flex-basis: auto;
+  background:#000033;
+  height:60px;
+}
+
+ul {
+	list-style:none;
+	margin:-10;
+	position:absolute;
+}
+
+ul li {
+	float:left;
+	margin-top:20px;
+}
+
+ul li a {
+  width:100px;
+	color:white;
+	display:block;
+	text-decoration:none;
+	font-size:18px;
+	text-align:center;
+	padding:10px;
+	border-radius:10px;
+	font-family:Century Gothic;
+	font-weight:bold;
+}
+
+a:hover {
+  background:#999999;	
+}
+
+ul li ul {
+  background:#000033;
+  display: none;
+}
+
+ul li ul li {
+	float:none;
+}
+
+.emblem {
+flex: 1;
+}
+
+.main {
+  flex: 4;
+  height: auto;
+  background-color: white;
+  padding-right: 30px;
+}
+
+.events-main {
+  flex: 4;
+  width: 700px;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+
+.address-container, .about-main {
+  padding-left: 30px;
+  padding-right: 30px;
+  flex-wrap: wrap;
+}
+
+.footer {
+  clear: both;
+  padding: 10px;
+  background-color: #999999;
+  color: white;
+  justify-content: flex-end;
+}
+
+.nav .selected {
+  font-weight: bold;
+}
+
+.social-icons {
+  text-align: center;
+}
+
+.social-icons li {
+  display:inline-block;
+  list-style-type:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+}
+
+.social-icons li a {
+  border-bottom: none;
+}
+
+.social-icons li img {
+  width:48px;
+  height:48px;
+  margin-right: 5px;
+}
+
+.social-media{
+  flex: 1;
+  flex-wrap: wrap;
+  padding-top: 150px;
+  padding-right: 50px;
+  align-self: center;
+}
+
+.faq {
+  flex: 4;
+  flex-wrap: wrap;
+}
+
+.faq-container {
+  margin: 0  ;                     
+  padding: 30px;
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.accordion a {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  width: 90%;
+  padding: 1rem 3rem 1rem 1rem;
+  color: blue;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.accordion a:hover, .accordion a:hover::after {
+  cursor: pointer;
+  color: black;
+}
+.accordion a:hover::after {
+  border: 1px solid red;
+
+}
+
+.accordion a.active {
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+.accordion a::after {
+  font-family: 'Ionicons';
+  content: '\f218';
+  position: absolute;
+  float: right;
+  right: 1rem;
+  font-size: 1rem;
+  color: blue;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid blue;
+  text-align: center;
+}
+
+.accordion a.active::after {
+  font-family: 'Ionicons';
+  content: '\f209';
+  color: blue;
+  border: 1px solid blue;
+}
+
+.accordion {
+  background: white;
+}
+.accordion .faq-content {
+  opacity: 0;
+  padding: 0 1rem;
+  max-height: 0;
+  border-bottom: 1px solid blue;
+  overflow: hidden;
+  clear: both;
+  -webkit-transition: all 0.2s ease 0.15s;
+  -o-transition: all 0.2s ease 0.15s;
+  transition: all 0.2s ease 0.15s;
+}
+
+.accordion .faq-content p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.accordion .faq-content.active {
+  opacity: 1;
+  padding: 1rem;
+  max-height: 100%;
+  -webkit-transition: all 0.35s ease 0.15s;
+  -o-transition: all 0.35s ease 0.15s;
+  transition: all 0.35s ease 0.15s;
+}
+
+a:hover {
+  background: gainsboro;
+}
+.picture {
+  width: 100%;
+  height: 300px;
+}
+
+div.pic-1 {
+  width: 100%;
+  height: 100%;
+  background-image: url(images/gallery/pic1.jpg);
+  background-image: no-repeat;
+  margin: 0;
+}
+
+div.pic-2 {
+  width: 100%;
+  height: 100%;
+  background-image: url(images/gallery/pic2.jpg);
+  background-image: no-repeat;
+  margin: 0;
+} 
+
+div.pic-3 {
+  width: 100%;
+  height: 100%;
+  background-image: url(images/gallery/pic3.jpg);
+  background-image: no-repeat;
+  margin: 0;
+}
+
+div.pic-4 {
+  width: 371px;
+  height: 550px;
+  background-image: url(images/principal.jpg);
+  background-image: no-repeat;
+  margin: 0;
+}
+  
+.school-pictures {
+  display: flex;
+  flex-direction: row;
+  padding-top: 15px;
+  justify-content: space-evenly;
+}
+
+.gallery-content {
+  padding: 2px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.principal {
+  flex: 1;
+  padding:15px;
+}
+
+.headmaster {
+  flex: 3;
+  padding: 20px;
+}
+.img  {
+  width: 100%;
+  height: 100%;
+}
+
+.slider{
+  width: auto;
+  height: 400px;
+  box-sizing: border-box;
+  margin: 20px auto;
+  box-shadow: 5px 5px 10px #ccc;
+}
+
